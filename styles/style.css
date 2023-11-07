@@ -217,8 +217,12 @@ float:none;
   align-items: center;
   
 }
-  
+ 
+  #bottom-menu ul{
+      margin-top: 50px;
+  }
   #bottom-menu ul li{
+      margin-top: 75px;
     
     display:block;
     border:0;
