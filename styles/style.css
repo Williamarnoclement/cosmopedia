@@ -1,0 +1,367 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Agdasima';
+    cursor: crosshair;
+}
+
+::selection {
+  color: whitesmoke;
+  background:skyblue;
+}
+
+h1{
+    font-family: 'Agdasima', sans-serif;
+    font-weight: bold;
+    font-size: 80px;
+}
+
+.content {
+    /* Add some content to push down the sticky header */
+    height: 1000px;
+}
+
+.cosmopedia h1 {
+    color:whitesmoke;
+}
+
+.cosmopedia p {
+    color: white;
+    font-size: 30px;
+}
+
+.cosmopedia a {
+    color: ghostwhite;
+    
+}
+
+
+#bottom-menu{
+  box-sizing:border-box;
+  display:block;
+  background:#333;
+  position:fixed;
+  bottom:0;
+  width:100%;
+  left:0;
+  padding:15px;
+font-size:14px;
+}
+.menu-container{
+
+  max-width:1080px;
+  margin:0 auto;
+  position:relative;
+
+}
+
+/*
+ * Back button
+ */
+.back-button{
+    box-sizing:border-box;
+ color:white;
+  text-decoration:none;
+  position:relative;
+  padding-left:25px;
+float:left;
+    z-index:2;
+
+}
+.back-button:after{
+  content:"\f177";
+  font-family:"FontAwesome", sans-serif;
+  position:absolute;
+  left:0;
+top:3px;
+  -webkit-transition: all 0.3s ease;
+-moz-transition: all 0.3s ease;
+-ms-transition: all 0.3s ease;
+-o-transition: all 0.3s ease;
+transition: all 0.3s ease;
+}
+
+.back-button:hover{
+color:#999;
+}
+
+/*
+ * The menu
+ */
+#bottom-menu ul{
+  margin:0;
+  padding:0;
+
+  margin:0 auto;
+  list-style-type:none;
+
+float:left;
+  position:relative;
+  text-align:center;
+  width:75%;
+
+}
+#bottom-menu ul:before{
+  clear:both;
+}
+#bottom-menu ul li{
+display:inline-block;
+  border-left:solid thin #ccc;
+   box-sizing:border-box;
+  padding:0 20px;
+}
+#bottom-menu ul li:first-child{
+  border-left:solid 0 #ccc;
+
+}
+
+#bottom-menu ul li a{
+  display:inline-block;
+  color:white;
+  text-decoration:none;
+  text-transform:uppercase;
+  font-size:16px;
+  -webkit-transition: all 0.3s ease;
+-moz-transition: all 0.3s ease;
+-ms-transition: all 0.3s ease;
+-o-transition: all 0.3s ease;
+transition: all 0.3s ease;
+}
+#bottom-menu ul li a.active-btn, #bottom-menu ul li a:hover{
+color:#999;
+}
+/*
+ * The responsive menu
+ */
+
+
+	
+
+@media screen and (max-width: 768px) {
+  
+
+/*A container for the spans making the hamburguer*/
+  #hamburguer-menu{
+
+ display:inline-block;
+  float:right;
+    z-index:2;
+  }
+  
+  /*
+ * Just a quick hamburger
+ */
+  #hamburguer-menu span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: #cdcdcd;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+-webkit-transition: all 0.3s ease;
+-moz-transition: all 0.3s ease;
+-ms-transition: all 0.3s ease;
+-o-transition: all 0.3s ease;
+transition: all 0.3s ease;
+}
+
+  .menu-position{
+display:none !important;
+    
+  }
+  
+  #bottom-menu ul{
+ 
+  box-sizing:border-box;
+    position:fixed;
+    width:100%;
+    bottom:0;
+    background:#333;
+    left:0;
+    padding:15px;
+    margin:0 auto;
+    text-align:center;
+  height: 100vh;
+    z-index:1;
+float:none;
+ overflow: hidden;
+    z-index:0;
+    display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flexbox;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -webkit-flex-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  
+}
+  
+  #bottom-menu ul li{
+    
+    display:block;
+    border:0;
+
+  }
+  
+    #bottom-menu ul li a{
+    
+font-size:25px;
+  }
+  
+
+  /**/
+  
+  .deg45{
+    -moz-transform: rotate(45deg);
+-webkit-transform: rotate(45deg);
+-o-transform: rotate(45deg);
+-ms-transform: rotate(45deg);
+transform: rotate(45deg);
+top:8px;
+  }
+  
+  .deg0{
+background:#333 !important;
+    z-index:-1 !important;
+  }
+  
+    .deg-45{
+    -moz-transform: rotate(-45deg);
+-webkit-transform: rotate(-45deg);
+-o-transform: rotate(-45deg);
+-ms-transform: rotate(-45deg);
+transform: rotate(-45deg);
+    bottom:9px;
+  }
+
+
+}
+
+
+a:link { text-decoration: none; }
+
+a:visited { text-decoration: none; }
+
+a:hover { text-decoration: none; }
+
+a:active { text-decoration: none; }
+
+.sticky-bottom-header {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.sticky-bottom-header nav {
+    text-align: center;
+}
+
+.sticky-bottom-header ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sticky-bottom-header li {
+    display: inline;
+    margin: 0 20px;
+}
+
+.sticky-bottom-header a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+
+.planet_body {
+    margin: 0;
+    padding: 0;
+    background-color: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.planet {
+    width: 100px;
+    height: 100px;
+    background-color: #3498db;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.link {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: #e74c3c;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+}
+
+.link:nth-child(1) { transform: translate(-50px, 0); }
+.link:nth-child(2) { transform: translate(0, -50px); }
+.link:nth-child(3) { transform: translate(50px, 0); }
+.link:nth-child(4) { transform: translate(0, 50px); }
+/* Add more link positions as needed */
+
+#star-map-container {
+    width: 100vw;
+    height: 100vh;
+}
+
+.cosmopedia {
+            text-align: center;
+        }
+
+.logo {
+            max-width: 100px; /* Adjust the logo size as needed */
+            height: auto;
+        }
+
+.text {
+            font-size: 24px; /* Adjust the font size as needed */
+            margin-top: 10px; /* Add spacing between the logo and text */
+        }
