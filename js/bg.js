@@ -2,6 +2,7 @@
         const map = document.getElementById('map');
         const computer = document.getElementById('computer');
         const menu = document.getElementById('bottom-menu');
+        const help = document.getElementById('help');
 
         const body = document.body;
 
@@ -30,6 +31,12 @@
             
         });
 
+        help.addEventListener('mouseover', () => {
+            body.style.backgroundImage = "url('./img/help.png')";
+            body.style.backgroundSize = "cover";
+            
+        });
+
 
         computer.addEventListener('mouseout', () => {
             body.style.backgroundImage = 'none';
@@ -47,6 +54,11 @@
         });
 
         menu.addEventListener('mouseout', () => {
+            body.style.backgroundImage = 'none';
+            body.style.backgroundColor = originalBackgroundColor;
+        });
+
+        help.addEventListener('mouseout', () => {
             body.style.backgroundImage = 'none';
             body.style.backgroundColor = originalBackgroundColor;
         });
